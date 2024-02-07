@@ -10,4 +10,4 @@ Category.hasMany(Product, {
   onDelete: 'CASCADE',
 });
 
-module.exports = { Product, Category, };
+module.exports = { Product, Category };
