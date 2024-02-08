@@ -1,13 +1,6 @@
 const Product = require('./Product');
-const Category = require('./Category');
+const Category = require('./category');
 
-Product.belongsTo(Category, {
-  foreignKey: 'category_id'
-});
-
-Category.hasMany(Product, {
-  foreignKey: 'category_id',
-  onDelete: 'CASCADE',
-});
+Category.hasMany(Product);
 
 module.exports = { Product, Category };
